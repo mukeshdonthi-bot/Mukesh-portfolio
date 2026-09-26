@@ -35,6 +35,7 @@ export default defineConfig(({ mode }) => {
       strictPort: true,
       allowedHosts: [
         'mukesh-portfolio-o8s2.onrender.com',
+        'mukeshdonthi.me'
       ],
       watch: {
         ignored: [
@@ -47,6 +48,7 @@ export default defineConfig(({ mode }) => {
       port: parseInt(process.env.PORT || '8443'),
       allowedHosts: [
         'mukesh-portfolio-o8s2.onrender.com',
+        'mukeshdonthi.me'
       ],
     },
   }
