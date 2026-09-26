@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=Outfit:wght@400;700;900&family=Libre+Caslon+Text:wght@400&family=Hanken+Grotesk:wght@400;600&display=swap');
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Inter:Bold';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Inter:Medium';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter:Regular';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter:Semi Bold';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* honour iOS safe-area so content clears notch / dynamic island */
+:root {
+  --nav-h-sm: calc(64px + env(safe-area-inset-top));
+  --nav-h-md: calc(81px + env(safe-area-inset-top));
+}
+
+.page-transition {
+  animation: page-enter 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: hover) {
+  header a,
+  main a,
+  main button,
+  footer a {
+    transition:
+      transform 180ms ease,
+      color 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      opacity 180ms ease;
+  }
+
+  header a:hover,
+  main a:hover,
+  main button:hover:not(:disabled),
+  footer a:hover {
+    transform: translateY(-2px);
+  }
+
+  header a:active,
+  main a:active,
+  main button:active:not(:disabled),
+  footer a:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+
+  header a,
+  main a,
+  main button,
+  footer a {
+    transition: none;
+  }
+}
+#contact-message{color:white}
